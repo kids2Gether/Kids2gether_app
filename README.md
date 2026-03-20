@@ -6,8 +6,9 @@ Repositório monorepo do aplicativo **Kids2gether** — o app para famílias que
 
 ```
 Kids2gether_app/
-├── Kids2gether_app_android/   # App Android (React Native / Expo)
-└── Kids2gether_app_ios/       # App iOS (React Native / Expo)
+├── Kids2gether_app_android/    # App Android (React Native / Expo)
+├── Kids2gether_app_ios/        # App iOS (React Native / Expo)
+└── Kids2gether_app_functions/  # Cloud Functions Firebase (Pagar.me)
 ```
 
 ## Sobre o projeto
