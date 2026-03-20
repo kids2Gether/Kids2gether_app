@@ -1,0 +1,26 @@
+feat: Usado quando uma nova funcionalidade (feature) é adicionada ao projeto.
+fix: Usado quando um erro (bug) no código é corrigido.
+refactor: Usado quando uma mudança é feita no código que não adiciona novas funcionalidades nem corrige erros, mas melhora a estrutura, legibilidade ou desempenho.
+docs: Usado quando uma modificação é feita na documentação do projeto.
+chore: Usado quando são feitas alterações em tarefas de manutenção, configuração ou ferramentas auxiliares, que não afetam diretamente o código do projeto.
+test: Usado quando são adicionados ou modificados testes no projeto.
+style: Usado quando uma modificação é feita no estilo do código, como alterações de formatação, espaçamento ou nomes de variáveis, sem afetar o funcionamento do código.
+perf: Usado quando uma otimização de desempenho é feita no código.
+revert: Usado quando um commit anterior é revertido.
+merge: Usado quando há uma fusão de branches (ramificações).
+
+Co-authored-by: Juanpi92 <juan.urgelles92@gmail.com>
+    
+Co-authored-by: plfmoura <plfmoura96@gmail.com>
+
+usuario: testeusuario
+email: plfmoura2@gmail.com
+senha: teste123
+
+icfmoura@gmail.com
+teste2
+
+id:
+ fd2fc595-2437-4be4-84a3-df852b3ce893
+
+ eas build --platform android

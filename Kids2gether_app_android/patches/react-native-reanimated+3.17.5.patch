@@ -1,0 +1,54 @@
+diff --git a/node_modules/react-native-reanimated/android/build.gradle b/node_modules/react-native-reanimated/android/build.gradle
+index 2de3ca1..0765bad 100644
+--- a/node_modules/react-native-reanimated/android/build.gradle
++++ b/node_modules/react-native-reanimated/android/build.gradle
+@@ -121,6 +121,7 @@ if (isNewArchitectureEnabled()) {
+ }
+ 
+ def reactNativeRootDir = resolveReactNativeDirectory()
++def reanimatedCxxDir = System.getenv("REANIMATED_CMAKE_BUILD_DIR") ?: "C:/rn-cxx/reanimated"
+ 
+ def reactProperties = new Properties()
+ file("$reactNativeRootDir/ReactAndroid/gradle.properties").withInputStream { reactProperties.load(it) }
+@@ -272,6 +273,7 @@ android {
+         cmake {
+             version = System.getenv("CMAKE_VERSION") ?: "3.22.1"
+             path "CMakeLists.txt"
++            buildStagingDirectory reanimatedCxxDir
+         }
+     }
+     buildTypes {
+diff --git a/node_modules/react-native-reanimated/android/src/main/cpp/reanimated/CMakeLists.txt b/node_modules/react-native-reanimated/android/src/main/cpp/reanimated/CMakeLists.txt
+index c61b03a..ce77bee 100644
+--- a/node_modules/react-native-reanimated/android/src/main/cpp/reanimated/CMakeLists.txt
++++ b/node_modules/react-native-reanimated/android/src/main/cpp/reanimated/CMakeLists.txt
+@@ -29,6 +29,12 @@ endif()
+ 
+ set_target_properties(reanimated PROPERTIES LINKER_LANGUAGE CXX)
+ 
++if(ANDROID)
++  target_link_options(reanimated PRIVATE
++    "-Wl,-z,max-page-size=16384"
++    "-Wl,-z,common-page-size=16384")
++endif()
++
+ target_link_libraries(reanimated worklets android)
+ 
+ if(ReactAndroid_VERSION_MINOR GREATER_EQUAL 76)
+diff --git a/node_modules/react-native-reanimated/android/src/main/cpp/worklets/CMakeLists.txt b/node_modules/react-native-reanimated/android/src/main/cpp/worklets/CMakeLists.txt
+index ce128cf..8bfd936 100644
+--- a/node_modules/react-native-reanimated/android/src/main/cpp/worklets/CMakeLists.txt
++++ b/node_modules/react-native-reanimated/android/src/main/cpp/worklets/CMakeLists.txt
+@@ -46,6 +46,12 @@ endif()
+ # build shared lib
+ set_target_properties(worklets PROPERTIES LINKER_LANGUAGE CXX)
+ 
++if(ANDROID)
++  target_link_options(worklets PRIVATE
++    "-Wl,-z,max-page-size=16384"
++    "-Wl,-z,common-page-size=16384")
++endif()
++
+ target_link_libraries(worklets log ReactAndroid::jsi fbjni::fbjni)
+ 
+ if(ReactAndroid_VERSION_MINOR GREATER_EQUAL 76)

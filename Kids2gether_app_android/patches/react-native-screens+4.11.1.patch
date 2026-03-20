@@ -1,0 +1,34 @@
+diff --git a/node_modules/react-native-screens/android/CMakeLists.txt b/node_modules/react-native-screens/android/CMakeLists.txt
+index 86ec079..bb6e9b7 100644
+--- a/node_modules/react-native-screens/android/CMakeLists.txt
++++ b/node_modules/react-native-screens/android/CMakeLists.txt
+@@ -30,6 +30,12 @@ set_target_properties(rnscreens PROPERTIES
+     POSITION_INDEPENDENT_CODE ON
+ )
+ 
++if(ANDROID)
++    target_link_options(rnscreens PRIVATE
++        "-Wl,-z,max-page-size=16384"
++        "-Wl,-z,common-page-size=16384")
++endif()
++
+ target_compile_definitions(
+     rnscreens
+     PRIVATE
+diff --git a/node_modules/react-native-screens/android/src/main/jni/CMakeLists.txt b/node_modules/react-native-screens/android/src/main/jni/CMakeLists.txt
+index 8502124..1b88b71 100644
+--- a/node_modules/react-native-screens/android/src/main/jni/CMakeLists.txt
++++ b/node_modules/react-native-screens/android/src/main/jni/CMakeLists.txt
+@@ -30,6 +30,12 @@ add_library(
+   ${LIB_CODEGEN_SRCS}
+ )
+ 
++if(ANDROID)
++  target_link_options(${LIB_TARGET_NAME} PRIVATE
++    "-Wl,-z,max-page-size=16384"
++    "-Wl,-z,common-page-size=16384")
++endif()
++
+ target_include_directories(
+   ${LIB_TARGET_NAME}
+   PUBLIC

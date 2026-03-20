@@ -1,0 +1,83 @@
+{
+  "project_info": {
+    "project_number": "786445331555",
+    "firebase_url": "https://kids2gether-4ca94.firebaseio.com",
+    "project_id": "kids2gether-4ca94",
+    "storage_bucket": "kids2gether-4ca94.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:786445331555:android:d8fcad8b902fdc69e05c56",
+        "android_client_info": {
+          "package_name": "com.kids2gether"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "786445331555-k0p5aump0sfc1a26ncnta43iiqgkvtat.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCJ2IZN45-MpGFkDZX0oaxENQWCfqXW5AQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "786445331555-k0p5aump0sfc1a26ncnta43iiqgkvtat.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "786445331555-1h3bmmiqdtun45t1u1s9ao3t4v3d4o36.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.pinnacolo.kids2gether"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:786445331555:android:908997d1c027e694e05c56",
+        "android_client_info": {
+          "package_name": "com.pinnacolo.kids2gether"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "786445331555-k0p5aump0sfc1a26ncnta43iiqgkvtat.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCJ2IZN45-MpGFkDZX0oaxENQWCfqXW5AQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "786445331555-k0p5aump0sfc1a26ncnta43iiqgkvtat.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "786445331555-1h3bmmiqdtun45t1u1s9ao3t4v3d4o36.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.pinnacolo.kids2gether"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
