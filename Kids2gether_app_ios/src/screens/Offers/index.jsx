@@ -158,7 +158,7 @@ export default function Offers() {
               cardBottom={true}
               title={handleWordRemoval(item.title.rendered)}
               backgroundImage={{
-                uri: `${item.yoast_head_json.og_image[0].url}`,
+                uri: item?.yoast_head_json?.og_image?.[0]?.url,
               }}
             />
           ))}

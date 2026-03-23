@@ -185,7 +185,7 @@ export default function Marketplace() {
                 </View>
                 <ImageBackground
                   source={{
-                    uri: `${data[0].yoast_head_json.og_image[0].url}`,
+                    uri: data?.[0]?.yoast_head_json?.og_image?.[0]?.url,
                   }}
                   style={styles.image}
                 />
@@ -266,7 +266,7 @@ export default function Marketplace() {
                   )
                 }
                 backgroundImage={{
-                  uri: `${item.yoast_head_json.og_image[0].url}`,
+                  uri: item?.yoast_head_json?.og_image?.[0]?.url,
                 }}
                 key={index}
                 title={item.title.rendered}

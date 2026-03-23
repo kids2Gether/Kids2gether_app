@@ -71,7 +71,7 @@ export default function MarketplaceDetails() {
               </View>
               <ImageBackground
                 source={{
-                  uri: `${route_data.item.yoast_head_json.og_image[0].url}`,
+                  uri: route_data?.item?.yoast_head_json?.og_image?.[0]?.url,
                 }}
                 style={styles.image}
               />

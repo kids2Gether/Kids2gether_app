@@ -7,8 +7,8 @@ import { View } from 'react-native'
 export default function TypeIcon({ title, image, onPress, color }) {
 
   return (
-    <TouchableOpacity>
-      <View onTouchEndCapture={onPress} style={{ marginHorizontal: 10, alignItems: 'center' }}>
+    <TouchableOpacity activeOpacity={0.7} onPress={onPress}>
+      <View style={{ marginHorizontal: 10, alignItems: 'center' }}>
         <View
           style={{
             width: 90,

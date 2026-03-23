@@ -72,7 +72,7 @@ export default function Offer() {
               </View>
               <ImageBackground
                 source={{
-                  uri: route_data.yoast_head_json.og_image[0].url,
+                  uri: route_data?.yoast_head_json?.og_image?.[0]?.url,
                 }}
                 style={styles.image}
               ></ImageBackground>

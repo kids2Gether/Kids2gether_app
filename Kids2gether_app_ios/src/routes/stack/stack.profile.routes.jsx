@@ -20,14 +20,18 @@ export default function StackProfileRoutes({ navigation, route }) {
   useLayoutEffect(() => {
     if (user.user) {
       navigation.setOptions({ tabBarStyle: { display: "flex" } });
-      return;
-    }
-    const tabHiddenRoutes = ["login", "register", "recovery"];
-    if (tabHiddenRoutes.includes(getFocusedRouteNameFromRoute(route))) {
-      navigation.setOptions({ tabBarStyle: { display: "none" } });
     } else {
-      navigation.setOptions({ tabBarStyle: { display: "flex" } });
+      const tabHiddenRoutes = ["login", "register", "recovery"];
+      if (tabHiddenRoutes.includes(getFocusedRouteNameFromRoute(route))) {
+        navigation.setOptions({ tabBarStyle: { display: "none" } });
+      } else {
+        navigation.setOptions({ tabBarStyle: { display: "flex" } });
+      }
     }
+
+    return () => {
+      navigation.setOptions({ tabBarStyle: { display: "flex" } });
+    };
   }, [navigation, route, user.user]);
 
   return (

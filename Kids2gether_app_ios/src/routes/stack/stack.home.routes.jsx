@@ -22,6 +22,10 @@ export default function StackHomeRoutes({ navigation, route }) {
     } else {
       navigation.setOptions({ tabBarStyle: { display: "flex" } });
     }
+
+    return () => {
+      navigation.setOptions({ tabBarStyle: { display: "flex" } });
+    };
   }, [navigation, route]);
 
   return (

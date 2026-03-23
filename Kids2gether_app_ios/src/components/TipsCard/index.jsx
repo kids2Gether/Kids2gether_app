@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { StyleSheet, Text } from "react-native";
-import { View } from "react-native";
+import { View, TouchableOpacity } from "react-native";
 import { ImageBackground } from "react-native";
 import HTML from "react-native-render-html";
 
@@ -8,11 +8,11 @@ export default function TipsCard({ backgroundImage, title, onPress }) {
   const [iconImage, setIconImage] = useState(null);
 
   return (
-    <View style={styles.card_container} onTouchEndCapture={onPress}>
+    <TouchableOpacity activeOpacity={0.7} onPress={onPress} style={styles.card_container}>
       <ImageBackground source={backgroundImage} style={styles.bg_image}>
         {title && <Text style={styles.title_post}>{title}</Text>}
       </ImageBackground>
-    </View>
+    </TouchableOpacity>
   );
 }
 

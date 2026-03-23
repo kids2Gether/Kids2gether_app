@@ -133,7 +133,7 @@ export default function Search() {
                 <CategoryCard
                   color={getColor(item.categories[0])}
                   backgroundImage={{
-                    uri: `${item.yoast_head_json.og_image[0].url}`,
+                    uri: item?.yoast_head_json?.og_image?.[0]?.url,
                   }}
                   onPress={() =>
                     handleNavigate(

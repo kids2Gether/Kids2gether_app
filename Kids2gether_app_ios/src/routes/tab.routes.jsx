@@ -36,9 +36,7 @@ export default function TabRoutes() {
         component={StackHomeRoutes}
         options={{
           tabBarIcon: () => (
-            <TouchableOpacity onPress={() => navigate.navigate('home-routes', { screen: 'home' })}>
-              <Image source={home_icon} style={styles.navigation_icon} />
-            </TouchableOpacity>
+            <Image source={home_icon} style={styles.navigation_icon} />
           ),
           tabBarLabel: ({ focused }) =>
             focused ? (
@@ -70,9 +68,7 @@ export default function TabRoutes() {
         component={StackMarketplaceRoutes}
         options={{
           tabBarIcon: () => (
-            <TouchableOpacity onPress={() => navigate.navigate('marketplace-routes', { screen: 'marketplace' })}>
-              <Image source={torre_icon} style={styles.navigation_icon} />
-            </TouchableOpacity>
+            <Image source={torre_icon} style={styles.navigation_icon} />
           ),
           tabBarLabel: ({ focused }) =>
             focused ? (
@@ -88,9 +84,7 @@ export default function TabRoutes() {
         component={StackCategoriesRoutes}
         options={{
           tabBarIcon: () => (
-            <TouchableOpacity onPress={() => navigate.navigate('categories-routes', { screen: 'categories' })}>
-              <Image source={categories_icon} style={styles.navigation_icon} />
-            </TouchableOpacity>
+            <Image source={categories_icon} style={styles.navigation_icon} />
           ),
           tabBarLabel: ({ focused }) =>
             focused ? (
@@ -128,9 +122,7 @@ export default function TabRoutes() {
         })}
         options={{
           tabBarIcon: () => (
-            <TouchableOpacity onPress={() => navigate.navigate('tips-routes', { screen: 'tips' })}>
-              <Image source={tips_icon} style={styles.navigation_icon} />
-            </TouchableOpacity>
+            <Image source={tips_icon} style={styles.navigation_icon} />
           ),
           tabBarLabel: ({ focused }) =>
             focused ? (
@@ -145,9 +137,7 @@ export default function TabRoutes() {
         component={StackProfileRoutes}
         options={{
           tabBarIcon: () => (
-            <TouchableOpacity onPress={() => navigate.navigate('profile-routes', { screen: user?.user ? 'logged' : 'lobby' })}>
-              <Image source={profile_icon} style={styles.navigation_icon} />
-            </TouchableOpacity>
+            <Image source={profile_icon} style={styles.navigation_icon} />
           ),
           tabBarLabel: ({ focused }) =>
             focused ? (

@@ -57,9 +57,8 @@ export default function PostCard({
   }, [icon]);
 
   return (
-    <TouchableOpacity>
+    <TouchableOpacity activeOpacity={0.7} onPress={onPress}>
       <View
-        onTouchEndCapture={onPress}
         style={[
           styles.card_container,
           setStyle ? setStyle : { width: 260, height: 180 },

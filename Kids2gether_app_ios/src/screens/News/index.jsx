@@ -93,7 +93,7 @@ export default function News() {
                 ]}
               ></View>
               <ImageBackground
-                source={{ uri: data.yoast_head_json.og_image[0].url }}
+                source={{ uri: data?.yoast_head_json?.og_image?.[0]?.url }}
                 style={styles.image}
               >
                 <View
