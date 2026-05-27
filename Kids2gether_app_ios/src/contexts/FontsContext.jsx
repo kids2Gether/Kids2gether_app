@@ -11,6 +11,12 @@ import Roboto_bold from "../../assets/fonts/Roboto/Roboto-Bold.ttf";
 import Roboto_bold_italic from "../../assets/fonts/Roboto/Roboto-BoldItalic.ttf";
 import Roboto_italic from "../../assets/fonts/Roboto/Roboto-Italic.ttf";
 import Roboto_regular from "../../assets/fonts/Roboto/Roboto-Regular.ttf";
+// Fontes dos icones (react-native-vector-icons). No bare antigo eram registradas
+// no Info.plist nativo; em managed precisam ser carregadas aqui, senao os icones
+// (botao voltar, etc.) aparecem como "?".
+import FontAwesomeFont from "react-native-vector-icons/Fonts/FontAwesome.ttf";
+import FeatherFont from "react-native-vector-icons/Fonts/Feather.ttf";
+import MaterialIconsFont from "react-native-vector-icons/Fonts/MaterialIcons.ttf";
 import { setUser } from "../reducer/userReducer";
 import { setContentMarkers } from "../reducer/mapReducer";
 import { setLocals } from '../reducer/localsReducer';
@@ -63,6 +69,11 @@ export default function FontsProvider({ children }) {
     Roboto_bold_italic,
     Roboto_italic,
     Roboto_regular,
+    // As chaves precisam bater EXATAMENTE com a fontFamily que cada icon set usa:
+    // FontAwesome -> "FontAwesome", Feather -> "Feather", MaterialIcons -> "Material Icons" (com espaco)
+    FontAwesome: FontAwesomeFont,
+    Feather: FeatherFont,
+    "Material Icons": MaterialIconsFont,
   });
 
   useEffect(() => {

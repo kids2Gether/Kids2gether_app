@@ -2,7 +2,9 @@ import React, { useEffect, useState } from "react";
 import { StyleSheet, Text } from "react-native";
 import { Image } from "react-native";
 import { View } from "react-native";
-import { ImageBackground } from "react-native";
+// expo-image (SDWebImage) substitui o ImageBackground do RN, que no iOS deixava
+// imagens remotas validas em branco/cinza.
+import { Image as ExpoImage } from "expo-image";
 
 import praia_icon from "../TypeIcon/utils/imgs/icone_praia.png";
 import neve_icon from "../TypeIcon/utils/imgs/icone_neve.png";
@@ -64,15 +66,15 @@ export default function PostCard({
           setStyle ? setStyle : { width: 260, height: 180 },
         ]}
       >
-        <ImageBackground
+        <ExpoImage
           source={backgroundImage}
           style={{
             width: "100%",
             height: "100%",
-            alignItems: "center",
-            justifyContent: "center",
           }}
-        ></ImageBackground>
+          contentFit="cover"
+          transition={150}
+        />
         <View style={styles.card_content}>
           {icon && iconImage !== undefined ? (
             <Image source={iconImage} style={{ width: 50, height: 50 }} />
