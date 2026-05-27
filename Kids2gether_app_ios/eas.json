@@ -8,6 +8,7 @@
       "developmentClient": true
     },
     "preview": {
+      "node": "20.19.4",
       "distribution": "internal",
       "ios": {
         "simulator": false
@@ -23,6 +24,7 @@
       }
     },
     "production": {
+      "node": "20.19.4",
       "autoIncrement": true,
       "env": {
         "EXPO_PUBLIC_FIREBASE_API_KEY": "AIzaSyCJ2IZN45-MpGFkDZX0oaxENQWCfqXW5AQ",
