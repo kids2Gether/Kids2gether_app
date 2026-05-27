@@ -1,10 +1,45 @@
 {
+  "cli": {
+    "version": ">= 5.2.0"
+  },
   "build": {
+    "development": {
+      "distribution": "internal",
+      "developmentClient": true
+    },
     "preview": {
+      "distribution": "internal",
       "ios": {
-        "simulator": true
+        "simulator": false
+      },
+      "env": {
+        "EXPO_PUBLIC_FIREBASE_API_KEY": "AIzaSyCJ2IZN45-MpGFkDZX0oaxENQWCfqXW5AQ",
+        "EXPO_PUBLIC_FIREBASE_AUTH_DOMAIN": "kids2gether-4ca94.firebaseapp.com",
+        "EXPO_PUBLIC_FIREBASE_PROJECT_ID": "kids2gether-4ca94",
+        "EXPO_PUBLIC_FIREBASE_STORAGE_BUCKET": "kids2gether-4ca94.appspot.com",
+        "EXPO_PUBLIC_FIREBASE_MESSAGING_SENDER_ID": "786445331555",
+        "EXPO_PUBLIC_FIREBASE_APP_ID": "1:786445331555:android:d8fcad8b902fdc69e05c56",
+        "EXPO_PUBLIC_GOOGLE_MAPS_API_KEY": "AIzaSyCJ2IZN45-MpGFkDZX0oaxENQWCfqXW5AQ"
       }
     },
-    "production": {}
+    "production": {
+      "autoIncrement": true,
+      "env": {
+        "EXPO_PUBLIC_FIREBASE_API_KEY": "AIzaSyCJ2IZN45-MpGFkDZX0oaxENQWCfqXW5AQ",
+        "EXPO_PUBLIC_FIREBASE_AUTH_DOMAIN": "kids2gether-4ca94.firebaseapp.com",
+        "EXPO_PUBLIC_FIREBASE_PROJECT_ID": "kids2gether-4ca94",
+        "EXPO_PUBLIC_FIREBASE_STORAGE_BUCKET": "kids2gether-4ca94.appspot.com",
+        "EXPO_PUBLIC_FIREBASE_MESSAGING_SENDER_ID": "786445331555",
+        "EXPO_PUBLIC_FIREBASE_APP_ID": "1:786445331555:android:d8fcad8b902fdc69e05c56",
+        "EXPO_PUBLIC_GOOGLE_MAPS_API_KEY": "AIzaSyCJ2IZN45-MpGFkDZX0oaxENQWCfqXW5AQ"
+      }
+    }
+  },
+  "submit": {
+    "production": {
+      "ios": {
+        "ascAppId": "1554942484"
+      }
+    }
   }
 }

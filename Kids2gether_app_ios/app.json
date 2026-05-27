@@ -1,0 +1,65 @@
+{
+  "expo": {
+    "name": "kids2gether",
+    "slug": "kids2gether",
+    "version": "1.6.3",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#80CAA7"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.kids2gether",
+      "buildNumber": "1",
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "Precisamos de acesso à sua localização para fornecer uma experiência personalizada.",
+        "UIBackgroundModes": [
+          "remote-notification"
+        ],
+        "ITSAppUsesNonExemptEncryption": false
+      },
+      "config": {
+        "googleMapsApiKey": "AIzaSyCJ2IZN45-MpGFkDZX0oaxENQWCfqXW5AQ"
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "config": {
+        "googleMaps": {
+          "apiKey": "AIzaSyCJ2IZN45-MpGFkDZX0oaxENQWCfqXW5AQ"
+        }
+      },
+      "permissions": [
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION",
+        "RECEIVE_BOOT_COMPLETED",
+        "VIBRATE"
+      ],
+      "package": "com.kids2gether.kids2gether"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "scheme": [
+      "kids2gether",
+      "fb1344205309501238"
+    ],
+    "extra": {
+      "googleMapsApiKey": "AIzaSyCJ2IZN45-MpGFkDZX0oaxENQWCfqXW5AQ",
+      "eas": {
+        "projectId": "fd2fc595-2437-4be4-84a3-df852b3ce893"
+      }
+    },
+    "owner": "kids2gether"
+  }
+}
