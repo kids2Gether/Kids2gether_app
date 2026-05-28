@@ -23,6 +23,7 @@ import { CommonActions } from "@react-navigation/native";
 import HTML from "react-native-render-html";
 import { useWindowDimensions, Linking } from "react-native";
 import { marketplaceTagsStyles, classesStyles, defaultTextProps, renderersProps, computeEmbeddedMaxWidth, ignoredStyles, systemFonts } from "../../utils/htmlStyles";
+import { htmlRenderers } from "../../utils/htmlRenderers";
 
 import { MARKETPLACE_ICON } from "../../components/TypeIcon/utils/iconTypes";
 import Header from "../../components/Header";
@@ -211,6 +212,7 @@ export default function Marketplace() {
                   classesStyles={classesStyles}
                   defaultTextProps={defaultTextProps}
                   renderersProps={renderersProps}
+                  renderers={htmlRenderers}
                   computeEmbeddedMaxWidth={computeEmbeddedMaxWidth(width - 20)}
                   enableExperimentalMarginCollapsing={true}
                   ignoredStyles={ignoredStyles}

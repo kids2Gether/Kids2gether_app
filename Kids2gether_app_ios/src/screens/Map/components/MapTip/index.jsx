@@ -5,6 +5,7 @@ import { Text } from "react-native";
 import { ScrollView } from "react-native";
 import { View } from "react-native";
 import HTML from "react-native-render-html";
+import { htmlRenderers } from "../../../../utils/htmlRenderers";
 import { styles } from "./styles";
 import { ImageBackground } from "react-native";
 import { Image } from "react-native";
@@ -120,6 +121,7 @@ export default function MapTrip() {
                             <HTML
                                 source={{ html: data.content.rendered }}
                                 contentWidth={380}
+                                renderers={htmlRenderers}
                             />
                         </View>
                         <View></View>

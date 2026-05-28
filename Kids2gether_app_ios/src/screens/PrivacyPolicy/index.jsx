@@ -11,6 +11,7 @@ import HTML from "react-native-render-html";
 import axios from "axios";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { tagsStyles, classesStyles, defaultTextProps, renderersProps, computeEmbeddedMaxWidth, ignoredStyles, systemFonts } from "../../utils/htmlStyles";
+import { htmlRenderers } from "../../utils/htmlRenderers";
 
 const PRIVACY_POLICY_PAGE_ID = 3;
 const CACHE_KEY = '@privacy_policy_cache';
@@ -96,6 +97,7 @@ export default function PrivacyPolicy() {
                 classesStyles={classesStyles}
                 defaultTextProps={defaultTextProps}
                 renderersProps={renderersProps}
+                renderers={htmlRenderers}
                 computeEmbeddedMaxWidth={computeEmbeddedMaxWidth(width - 40)}
                 enableExperimentalMarginCollapsing={true}
                 ignoredStyles={ignoredStyles}

@@ -8,6 +8,7 @@ import { View } from "react-native";
 import HTML from "react-native-render-html";
 import { styles } from "./styles";
 import { tagsStyles, classesStyles, defaultTextProps, renderersProps, computeEmbeddedMaxWidth, ignoredStyles, systemFonts } from "../../utils/htmlStyles";
+import { htmlRenderers } from "../../utils/htmlRenderers";
 import { ImageBackground } from "react-native";
 
 import Header from "../../components/Header";
@@ -90,6 +91,7 @@ export default function Offer() {
                 classesStyles={classesStyles}
                 defaultTextProps={defaultTextProps}
                 renderersProps={renderersProps}
+                renderers={htmlRenderers}
                 computeEmbeddedMaxWidth={computeEmbeddedMaxWidth(width - 20)}
                 enableExperimentalMarginCollapsing={true}
                 ignoredStyles={ignoredStyles}

@@ -10,6 +10,7 @@ import { useNavigation, useRoute } from "@react-navigation/core";
 import { ICON_TYPES } from "../../components/TypeIcon/utils/iconTypes";
 import HTML from "react-native-render-html";
 import { tagsStyles, classesStyles, defaultTextProps, renderersProps, computeEmbeddedMaxWidth, ignoredStyles, systemFonts } from "../../utils/htmlStyles";
+import { htmlRenderers } from "../../utils/htmlRenderers";
 
 import praia_icon from "../../components/TypeIcon/utils/imgs/icone_praia.png";
 import neve_icon from "../../components/TypeIcon/utils/imgs/icone_neve.png";
@@ -121,6 +122,7 @@ export default function News() {
                 classesStyles={classesStyles}
                 defaultTextProps={defaultTextProps}
                 renderersProps={renderersProps}
+                renderers={htmlRenderers}
                 computeEmbeddedMaxWidth={computeEmbeddedMaxWidth(width - 20)}
                 enableExperimentalMarginCollapsing={true}
                 ignoredStyles={ignoredStyles}

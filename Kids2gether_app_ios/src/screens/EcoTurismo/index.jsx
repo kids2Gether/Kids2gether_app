@@ -7,6 +7,7 @@ import Header from "../../components/Header";
 import ScrollToTop from "../../components/ScrollToTop";
 import HTML from "react-native-render-html";
 import { tagsStyles, classesStyles, defaultTextProps, renderersProps, computeEmbeddedMaxWidth, ignoredStyles, systemFonts } from "../../utils/htmlStyles";
+import { htmlRenderers } from "../../utils/htmlRenderers";
 
 export default function EcoTurismo() {
   const navigation = useNavigation();
@@ -72,6 +73,7 @@ export default function EcoTurismo() {
             classesStyles={classesStyles}
             defaultTextProps={defaultTextProps}
             renderersProps={renderersProps}
+            renderers={htmlRenderers}
             computeEmbeddedMaxWidth={computeEmbeddedMaxWidth(width - 20)}
             enableExperimentalMarginCollapsing={true}
             ignoredStyles={ignoredStyles}

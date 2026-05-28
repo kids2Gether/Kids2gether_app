@@ -7,6 +7,7 @@ import { View } from "react-native";
 import HTML from "react-native-render-html";
 import { styles } from "./styles";
 import { tagsStyles, classesStyles, defaultTextProps, renderersProps, computeEmbeddedMaxWidth, ignoredStyles, systemFonts } from "../../utils/htmlStyles";
+import { htmlRenderers } from "../../utils/htmlRenderers";
 import { ImageBackground } from "react-native";
 import { Image } from "react-native";
 
@@ -103,6 +104,7 @@ export default function Trip() {
                 classesStyles={classesStyles}
                 defaultTextProps={defaultTextProps}
                 renderersProps={renderersProps}
+                renderers={htmlRenderers}
                 computeEmbeddedMaxWidth={computeEmbeddedMaxWidth(width - 20)}
                 enableExperimentalMarginCollapsing={true}
                 ignoredStyles={ignoredStyles}

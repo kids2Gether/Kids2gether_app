@@ -12,6 +12,7 @@ import { useRef } from "react";
 import HTML from "react-native-render-html";
 import axios from "axios";
 import { tagsStyles, classesStyles, defaultTextProps, renderersProps, computeEmbeddedMaxWidth, ignoredStyles, systemFonts } from "../../utils/htmlStyles";
+import { htmlRenderers } from "../../utils/htmlRenderers";
 
 export default function Tip() {
   const navigation = useNavigation();
@@ -131,6 +132,7 @@ export default function Tip() {
                 classesStyles={classesStyles}
                 defaultTextProps={defaultTextProps}
                 renderersProps={renderersProps}
+                renderers={htmlRenderers}
                 computeEmbeddedMaxWidth={computeEmbeddedMaxWidth(width - 20)}
                 enableExperimentalMarginCollapsing={true}
                 ignoredStyles={ignoredStyles}
