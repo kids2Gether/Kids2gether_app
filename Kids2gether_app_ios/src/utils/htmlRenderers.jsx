@@ -19,8 +19,12 @@ export function HTMLImageRenderer({ tnode }) {
   const [ratio, setRatio] = useState(
     attrW > 0 && attrH > 0 ? attrW / attrH : null
   );
+  const [failed, setFailed] = useState(false);
 
-  if (!src) return null;
+  // Sem src, ou imagem indisponivel no servidor (404): nao renderiza nada,
+  // evitando um espaco em branco no meio do artigo. Quando a imagem voltar a
+  // existir no servidor (HTTP 200), ela carrega normalmente — sem mudanca no app.
+  if (!src || failed) return null;
 
   const width = contentWidth || 300;
   const height = ratio ? Math.round(width / ratio) : Math.round(width * 0.6);
@@ -37,6 +41,7 @@ export function HTMLImageRenderer({ tnode }) {
       }}
       contentFit="cover"
       transition={150}
+      onError={() => setFailed(true)}
       onLoad={(e) => {
         const d = e?.source;
         if (!ratio && d?.width > 0 && d?.height > 0) {
